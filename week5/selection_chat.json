@@ -6,7 +6,7 @@
         { "role": "user", "content": "I need an NDA between two parties" },
         { "role": "assistant", "content": "{\"as\": \"lawyer\", \"action\": \"draft\", \"document\": \"an NDA between two parties.\"}" },
         { "role": "user", "content": "I'd like a haiku about American Sign Language" },
-        { "role": "assistant", "content": "{\"as\": \"writer\", \"action\": \"compose\", \"document\": \"a haiku about large language models.\"}" },
+        { "role": "assistant", "content": "{\"as\": \"writer\", \"action\": \"compose\", \"document\": \"a haiku about American Sign Language.\"}" },
         { "role": "user", "content": "{{ask}}" }
     ]
 }
