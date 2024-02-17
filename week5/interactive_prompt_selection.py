@@ -1,3 +1,6 @@
+import sys
+sys.path.append('../')
+
 from utilities import ChatTemplate
 import json
 

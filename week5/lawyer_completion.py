@@ -1,3 +1,6 @@
+import sys
+sys.path.append('../')
+
 from utilities import Template
 
 response = Template.from_file('lawyer.json').completion(

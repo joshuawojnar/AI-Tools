@@ -1,3 +1,6 @@
+import sys
+sys.path.append('../')
+
 from utilities import ChatTemplate
 
 response = ChatTemplate.from_file('lawyer_chat.json').completion(
