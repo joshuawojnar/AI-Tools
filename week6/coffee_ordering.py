@@ -20,7 +20,7 @@ def step(template_file, pattern):
         print(f'{message.content}')
         chat_template.template['messages'].append({'role': message.role, 'content': message.content})
 
-order = step('order_confirmation.json', r'ORDER(.*)DONE')
+order = step('order_confirm.json', r'ORDER(.*)DONE')
 phone = step('phone_num.json', r'PHONE(.*)DONE')
 
 print("Thank you! Here is your information:")
