@@ -4,7 +4,7 @@ import os
 openai.api_key = os.environ['OPENAI_API_KEY']
 
 # for homework 6, please change this to your own model
-modelName = 'ft:davinci-002:personal::8vTNUS40'
+model_name = 'ft:gpt-3.5-turbo-0613:personal::8vqNsgCI'
 
 template = '''You are a Q&A bot. You provide short answers to questions.
 For example:
@@ -17,9 +17,12 @@ while True:
     if prompt == 'exit':
         break
 
-    response = openai.completions.create(
-        model= modelName,
-        temperature=0,
-        stop=['\n'],
-        prompt=template + prompt)
-    print(response.choices[0].text)
+    message = [{'role': 'user', 'content': template + prompt}]
+
+    response = openai.chat.completions.create(
+        model = model_name,
+        temperature = 0,
+        stop = ['\n'],
+        messages = message)
+
+    print("assistant: " + response.choices[0].message.content)
