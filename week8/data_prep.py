@@ -18,6 +18,7 @@ for f in os.listdir(folder_name):
         text = f.read()
 
     # Pass the text content to a template for processing and store the response
+    #   each completion makes 20 prompts
     response = template.completion({'info': text, 'n': '20'})
     # Extract the processed text from the response, 
     #   remove leading/trailing whitespace, and append it to a JSONL string
